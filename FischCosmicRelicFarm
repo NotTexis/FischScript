@@ -172,7 +172,7 @@ local function createBillboard(part, loot, obj)
     txt.BackgroundTransparency = 1
     txt.TextScaled = true
     txt.Font = Enum.Font.SourceSansBold
-    txt.Text = "鈽� " .. loot.id
+    txt.Text = "★ " .. loot.id
     txt.TextColor3 = loot.color
     txt.TextStrokeTransparency = 0.6
     ESPs[part] = bg
@@ -335,7 +335,7 @@ local function createGUI()
     title.Position = UDim2.new(0, 8, 0, 5)
     title.BackgroundTransparency = 1
     title.Font = Enum.Font.GothamBold
-    title.Text = "Texis 馃挊"
+    title.Text = "Texis~"
     title.TextColor3 = Color3.fromRGB(255, 255, 255)
     title.TextSize = 18
     title.TextStrokeTransparency = 0.5
@@ -356,7 +356,7 @@ local function createGUI()
     local closeBtn = Instance.new("TextButton")
     closeBtn.Size = UDim2.new(0, 24, 0, 24)
     closeBtn.Position = UDim2.new(1, -28, 0, 8)
-    closeBtn.Text = "鉁�"
+    closeBtn.Text = "x"
     closeBtn.Font = Enum.Font.GothamBold
     closeBtn.TextSize = 14
     closeBtn.TextColor3 = Color3.fromRGB(170, 220, 255)
@@ -426,7 +426,7 @@ local function createGUI()
         return btn
     end
     local espBtn = createButton(
-        "馃憗锔� ESP: "
+        "ESP: "
             .. (getgenv().ESPEnabled and "ON" or "OFF"),
         UDim2.new(0, 8, 0, 45),
         getgenv().ESPEnabled
@@ -438,7 +438,7 @@ local function createGUI()
         setESP(not getgenv().ESPEnabled)
         if getgenv().ESPEnabled then
             enableESP()
-            espBtn.Text = "馃憗锔� ESP: ON"
+            espBtn.Text = "ESP: ON"
             espBtn.TextColor3 =
                 Color3.fromRGB(255, 255, 255)
             espBtn.BackgroundColor3 =
@@ -447,7 +447,7 @@ local function createGUI()
                 Color3.fromRGB(70, 170, 255)
         else
             disableESP()
-            espBtn.Text = "馃憗锔� ESP: OFF"
+            espBtn.Text = "ESP: OFF"
             espBtn.TextColor3 =
                 Color3.fromRGB(150, 180, 210)
             espBtn.BackgroundColor3 =
@@ -457,7 +457,7 @@ local function createGUI()
         end
     end)
     local acBtn = createButton(
-        "馃寑 Auto+Hop: "
+        "Auto+Hop: "
             .. (getgenv().AutoCollectEnabled
                 and "ON"
                 or "OFF"),
@@ -472,7 +472,7 @@ local function createGUI()
             not getgenv().AutoCollectEnabled
         )
         if getgenv().AutoCollectEnabled then
-            acBtn.Text = "馃寑 Auto+Hop: ON"
+            acBtn.Text = "Auto+Hop: ON"
             acBtn.TextColor3 =
                 Color3.fromRGB(255, 255, 255)
             acBtn.BackgroundColor3 =
@@ -480,7 +480,7 @@ local function createGUI()
             acBtn.UIStroke.Color =
                 Color3.fromRGB(70, 180, 255)
         else
-            acBtn.Text = "馃寑 Auto+Hop: OFF"
+            acBtn.Text = "Auto+Hop: OFF"
             acBtn.TextColor3 =
                 Color3.fromRGB(150, 180, 210)
             acBtn.BackgroundColor3 =
@@ -490,7 +490,7 @@ local function createGUI()
         end
     end)
     local acNoHopBtn = createButton(
-        "馃摗 Auto NoHop: "
+        "Auto NoHop: "
             .. (getgenv().AutoCollectNoHopEnabled
                 and "ON"
                 or "OFF"),
@@ -505,7 +505,7 @@ local function createGUI()
             not getgenv().AutoCollectNoHopEnabled
         )
         if getgenv().AutoCollectNoHopEnabled then
-            acNoHopBtn.Text = "馃摗 Auto NoHop: ON"
+            acNoHopBtn.Text = "Auto NoHop: ON"
             acNoHopBtn.TextColor3 =
                 Color3.fromRGB(255, 255, 255)
             acNoHopBtn.BackgroundColor3 =
@@ -513,7 +513,7 @@ local function createGUI()
             acNoHopBtn.UIStroke.Color =
                 Color3.fromRGB(70, 170, 255)
         else
-            acNoHopBtn.Text = "馃摗 Auto NoHop: OFF"
+            acNoHopBtn.Text = "Auto NoHop: OFF"
             acNoHopBtn.TextColor3 =
                 Color3.fromRGB(150, 180, 210)
             acNoHopBtn.BackgroundColor3 =
@@ -525,7 +525,7 @@ local function createGUI()
     local hopBtn = Instance.new("TextButton")
     hopBtn.Size = UDim2.new(1, -16, 0, 32)
     hopBtn.Position = UDim2.new(0, 8, 0, 165)
-    hopBtn.Text = "馃攧 Server Hop"
+    hopBtn.Text = "Server Hop"
     hopBtn.Font = Enum.Font.GothamBold
     hopBtn.TextSize = 12
     hopBtn.TextColor3 =
@@ -563,7 +563,7 @@ local function createGUI()
             Color3.fromRGB(25, 90, 190)
     end)
     hopBtn.MouseButton1Click:Connect(function()
-        hopBtn.Text = "馃攦 Hopping..."
+        hopBtn.Text = "Hopping..."
         hopBtn.TextColor3 =
             Color3.fromRGB(180, 230, 255)
         hopBtn.BackgroundColor3 =
